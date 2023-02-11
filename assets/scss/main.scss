@@ -1,0 +1,54 @@
+@import './assets/reset';
+@import './assets/variables';
+@import './assets/common';
+@import './assets/mixins';
+
+.card {
+    max-width: 335px;
+    margin: auto;
+
+    &__image {
+
+        &__img {
+            border-radius: 13px 13px 0 0;
+        }
+    }
+
+    &__info {
+        background-color: $primary-500;
+        padding: 16px 24px 40px 24px;
+
+        &__title {
+            padding-bottom: 8px;
+        }
+
+        &__text {
+            padding-bottom: 40px;
+        }
+
+        &__button {
+            width: 100%;
+        }
+    }
+
+    @include tablet {
+        max-width: 628px;
+
+        &__image {
+
+            &__img {
+                border-radius: 24px 24px 0 0;
+            }
+        }
+
+        &__info {
+            padding: 24px 32px 40px 32px;
+            
+            &__button {
+                width: unset;
+            }
+        }
+
+    }
+
+}
